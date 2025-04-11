@@ -9,7 +9,7 @@ Este proyecto recopila implementaciones, ejercicios y soluciones desarrollados d
 ## Estructura del Repositorio
 
 - `/contests`: Ejercicios y tareas prácticas
-- `/exámenes`: Soluciones de los exámenes
+- `/examenes`: Soluciones de los exámenes
 - `/notas`: Apuntes y material teórico relevante
 
 ## Temas Cubiertos
