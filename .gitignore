@@ -33,3 +33,6 @@
 
 # CPH
 *.cph
+
+# VSCode
+.vscode/
