@@ -21,24 +21,18 @@ typedef vector<ll> vll;
 
 #define DEBUG cerr << "DEBUG: " << __LINE__ << endl;
 
-int main() {
+signed main() {
     FAST_IO;
-    int t;
-    cin >> t;
-    rep(i, 0, t){
-        int n;
-        cin >> n;
-        string x;
-        cin >> x;
-        set <char> fsolved;
-        rep(j, 0, n){
-            fsolved.insert(x[j]);
-        }
-        int res = (fsolved.size()*2) + (x.size()-fsolved.size());
-        cout << res << endl;
+    ll n, sum_n, a, x, res;
+    cin >> n;
+    x = 0;
+    sum_n = (n*(n+1))/2;
+    rep(i, 0, n-1){
+        cin >> a;
+        x +=a;
     }
-
-
+    res = sum_n - x;
+    cout << res;
 
     return 0;
 }

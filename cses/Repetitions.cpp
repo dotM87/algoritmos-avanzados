@@ -16,22 +16,29 @@ typedef vector<ll> vll;
 #define mp make_pair
 #define fi first
 #define se second
+
 #define FAST_IO ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
 #define DEBUG cerr << "DEBUG: " << __LINE__ << endl;
 
 int main() {
-    FAST_IO; 
-    string x;
-    cin >> x;
-    set<char> s;
-    rep(i, 0, sz(x)) {
-        s.insert(x[i]);
+    FAST_IO;
+    string dna;
+    cin >> dna;
+    int conta = 0;
+    int res = 0;
+    rep(i,0,sz(dna)){
+        if (dna[i] == dna[i+1]){
+            conta++;
+            if (conta>res){
+                res = conta;
+            }
+        }else{
+            conta = 0;
+        }
     }
-    if (sz(s) % 2 == 0) {
-        cout << "CHAT WITH HER!" << endl;
-    } else {
-        cout << "IGNORE HIM!" << endl;
-    }
-    
+    cout << res+1;
+
+
     return 0;
 }
