@@ -33,18 +33,12 @@ int main() {
         int res = 0;
         if (k<x){
             res = k;
+        }else if (k==x){
+            res = k+1;
         }else {
-            while(j<k){
-                if(res % x != 0){
-                    j++;
-                    res++;
-                }else{
-                    res++;
-                }
-            }
-            res = res-1;
+            res = ((k-1)/(x-1)* x + (((k-1)%(x-1)) + 1));
         }
-        cout << res << endl;
+        cout << res  << endl;
     }
     return 0;
 }
