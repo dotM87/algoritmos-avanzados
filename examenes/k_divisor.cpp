@@ -38,7 +38,7 @@ int main() {
         }else {
             res = ((k-1)/(x-1)* x + (((k-1)%(x-1)) + 1));
         }
-        cout << res  << endl;
+        cout << res << endl;
     }
     return 0;
 }
