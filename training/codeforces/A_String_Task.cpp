@@ -26,13 +26,25 @@ typedef priority_queue<int> pq;
 const int MOD = 1000000007;
 const ll INF = 9223372036854775807LL;
 
+bool isConsonant(char c){
+    bool res = false;
+    if (c!='a' && c!='e' && c!='i' && c!='o' && c!='u' && c!='y'){
+        res = true;
+    }
+    return res;
+}
+
 signed main() {
     FAST_IO;
-    ll n, m, a, an, am, res;
-    cin >> n >> m >> a;
-    an = n%a==0 ? n/a : (n/a)+1;
-    am = m%a==0 ? m/a : (m/a)+1;
-    res = an*am;
+    string x; cin >> x;
+    string res;
+    trav(ch, x){
+        ch = tolower(ch);
+        if (isConsonant(ch)){
+            res.append(".");
+            res.append(1, ch);
+        }
+    }
     cout << res;
 
     return 0;

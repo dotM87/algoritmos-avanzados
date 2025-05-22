@@ -28,12 +28,20 @@ const ll INF = 9223372036854775807LL;
 
 signed main() {
     FAST_IO;
-    ll n, m, a, an, am, res;
-    cin >> n >> m >> a;
-    an = n%a==0 ? n/a : (n/a)+1;
-    am = m%a==0 ? m/a : (m/a)+1;
-    res = an*am;
-    cout << res;
+    string x;
+    cin >> x;
+
+    string w = "hello";
+    int m = 0;
+
+    trav (e, x) {
+        if (e == w[m]) {
+            m++;
+            if (m == sz(w)) break;
+        }
+    }
+
+    cout << (m == sz(w) ? "YES" : "NO") << '\n';
 
     return 0;
 }

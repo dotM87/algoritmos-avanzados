@@ -12,7 +12,7 @@ typedef priority_queue<int> pq;
 
 #define forn(i, n) for (int i = 0; i < (n); i++)
 #define fore(i, a, b) for(int i = (a); i <(b); i++)
-#define trav(a, x) for(auto& a : x)
+#define forv(a, x) for(auto& a : x)
 #define all(x) x.begin(), x.end()
 #define sz(x) (int)(x).size()
 #define pb push_back
@@ -27,13 +27,19 @@ const int MOD = 1000000007;
 const ll INF = 9223372036854775807LL;
 
 signed main() {
-    FAST_IO;
-    ll n, m, a, an, am, res;
-    cin >> n >> m >> a;
-    an = n%a==0 ? n/a : (n/a)+1;
-    am = m%a==0 ? m/a : (m/a)+1;
-    res = an*am;
-    cout << res;
+  FAST_IO;
+  int n; cin >> n;
+  string x; cin >> x;
+  char ant = x[0];
+  int res = 0;
+  forn(i,n){
+    if (ant == x[i]){
+      res++;
+    }
+    ant = x[i];
+  }
 
-    return 0;
+  cout << res - 1;
+
+  return 0;
 }
